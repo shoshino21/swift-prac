@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:001-SHONotes.xcodeproj">
+      location = "self:001-MovieDbDemo.xcodeproj">
    </FileRef>
 </Workspace>
