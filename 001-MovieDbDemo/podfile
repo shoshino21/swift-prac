@@ -7,6 +7,7 @@ target '001-MovieDbDemo' do
 
   # Pods for 001-MovieDbDemo
 
-pod "FMDB"
+  pod 'FMDB'
+  pod 'SnapKit', '~> 4.0.0'
 
 end
