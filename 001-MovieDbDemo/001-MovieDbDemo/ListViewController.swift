@@ -9,23 +9,10 @@
 import UIKit
 import SnapKit
 
-struct MovieInfo {
-  var movieId: Int!
-  var title: String!
-  var category: String!
-  var year: Int!
-  var movieURL: String!
-  var coverURL: String!
-  var watched: Bool!
-}
-
-class ListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ListViewController: UIViewController {
   
   // MARK: UI
-  
   var movieListTable: UITableView!
-  // 一定是 var，用 let 就無法在之後 viewDidLoad 時賦值了
-  // 另外這邊還是不太懂為什麼一定要加驚嘆號
   
   // MARK: Properties
   let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
@@ -37,11 +24,14 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     self.createTable()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
     
-    
-    
+    movies = DBManager.shared.loadMovies()
+    movieListTable.reloadData()
   }
   
   func createTable() {
@@ -58,23 +48,39 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
       make.left.right.bottom.equalTo(self.view)
     }
   }
-  
-  // MARK: UITableViewDataSource / Delegate
+}
+
+extension ListViewController: UITableViewDataSource, UITableViewDelegate {
+  // MARK: UITableView
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 20
+    return (movies != nil) ? movies.count : 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: listCellIdentifier, for: indexPath)
     
-    if let myLabel = cell.textLabel {
-      myLabel.text = "\([indexPath.row])"
+    let currentMovie = movies[indexPath.row]
+    
+    cell.textLabel?.text = currentMovie.title
+    cell.imageView?.contentMode = .scaleAspectFit
+    
+    let session = URLSession(configuration: .default)
+    let url = URL(string: currentMovie.coverURL)!
+    
+    let task = session.dataTask(with: url) { (imageData, response, error) in
+      if let data = imageData {
+        DispatchQueue.main.async {
+          cell.imageView?.image = UIImage(data: data)
+          cell.layoutSubviews()
+        }
+      }
     }
+    task.resume()
     
     cell.selectionStyle = .none
     return cell

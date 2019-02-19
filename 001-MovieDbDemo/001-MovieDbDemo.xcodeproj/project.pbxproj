@@ -12,6 +12,7 @@
 		903C7330221581C40011588D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C732F221581C40011588D /* ListViewController.swift */; };
 		903C7335221581C50011588D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903C7334221581C50011588D /* Assets.xcassets */; };
 		903C7338221581C50011588D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903C7336221581C50011588D /* LaunchScreen.storyboard */; };
+		90882F5A221BA6F000A67BFA /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90882F59221BA6F000A67BFA /* DBManager.swift */; };
 		909C5DDF221584C10097C855 /* movies.tsv in Resources */ = {isa = PBXBuildFile; fileRef = 909C5DDE221584C10097C855 /* movies.tsv */; };
 		909C5DE12215853C0097C855 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909C5DE02215853C0097C855 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,7 @@
 		903C7334221581C50011588D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		903C7337221581C50011588D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		903C7339221581C50011588D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90882F59221BA6F000A67BFA /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		909C5DDE221584C10097C855 /* movies.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = movies.tsv; sourceTree = SOURCE_ROOT; };
 		909C5DE02215853C0097C855 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E27AE1DDF356CA18EBB07218 /* Pods_001_MovieDbDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_001_MovieDbDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				903C732D221581C40011588D /* AppDelegate.swift */,
+				90882F59221BA6F000A67BFA /* DBManager.swift */,
 				903C732F221581C40011588D /* ListViewController.swift */,
 				909C5DE02215853C0097C855 /* DetailViewController.swift */,
 				903C7334221581C50011588D /* Assets.xcassets */,
@@ -216,6 +219,7 @@
 				909C5DE12215853C0097C855 /* DetailViewController.swift in Sources */,
 				903C7330221581C40011588D /* ListViewController.swift in Sources */,
 				903C732E221581C40011588D /* AppDelegate.swift in Sources */,
+				90882F5A221BA6F000A67BFA /* DBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

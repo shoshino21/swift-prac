@@ -16,15 +16,18 @@ class DetailViewController: UIViewController {
   var categoryLbl: UILabel!
   var yearLbl: UILabel!
   var watchedSw: UISwitch!
+  var likesSt: UIStepper!
   var descriptionLbl: UILabel!
   
   // MARK: Properties
   var movieId: Int!
   var movieInfo: MovieInfo!
   
+  // MARK: UI
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.createUI()
+    createUI()
   }
   
   func createUI() {
@@ -45,9 +48,13 @@ class DetailViewController: UIViewController {
     self.view.addSubview(yearLbl)
     
     watchedSw = UISwitch()
-    watchedSw.isOn = false
+    watchedSw.addTarget(self, action: #selector(watchedStatusChanged), for: .valueChanged)
     self.view.addSubview(watchedSw)
   
+    likesSt = UIStepper()
+    likesSt.addTarget(self, action: #selector(numberOfLikesChanged), for: .valueChanged)
+    self.view.addSubview(likesSt)
+    
     descriptionLbl = UILabel()
     descriptionLbl.font = .systemFont(ofSize: 15)
     descriptionLbl.textColor = .gray
@@ -58,9 +65,10 @@ class DetailViewController: UIViewController {
     movieTitleBtn.setTitle("HAHAHA", for: .normal)
     categoryLbl.text = "OHOH"
     yearLbl.text = "1986"
-    descriptionLbl.text = "1234567890qwertyuiop[asdfgjklxcvbnm234567890qwertyuiop[asdfghjklxcvbnm1234567890poiuytrewqasdfgjklmbvcxzasdfjkjklasdfjklasdfjkladfjkladfjkladsfjkladsfjkaldsfjkaldfjnm234567890qwertyuiop[asdfghjklxcvbnm1234567890poiuytrewqasdfgjklmbvcxzasdfjkjklasdfjklasdfjkladfjkladfjkladsfjkladsfjkaldsfjkaldfj"
+    likesSt.value = 2.0
+    descriptionLbl.text = "1234567890qwertyuiop[asdfgjklxcvbnm234567890qwertyuiop[asdfghjklxcvbnm1234567890poiuytrewqasdfgjklmbvcxzasdfjkjklasdfjklasdfjkladfjkladfjkladsfjkladsfjkaldsfjk"
     
-    self.addConstraints()
+    addConstraints()
   }
 
   func addConstraints() {
@@ -90,15 +98,69 @@ class DetailViewController: UIViewController {
       make.top.equalTo(yearLbl.snp_bottomMargin).offset(50)
       make.centerX.equalTo(self.view)
     }
+
+    likesSt.snp.makeConstraints { (make) in
+      make.top.equalTo(watchedSw.snp_bottomMargin).offset(30)
+      make.centerX.equalTo(self.view)
+    }
     
     descriptionLbl.snp.makeConstraints { (make) in
-      make.bottom.equalTo(self.view.snp_bottomMargin).offset(-80)
+      make.bottom.equalTo(self.view.snp_bottomMargin).offset(-40)
       make.centerX.equalTo(self.view)
       make.width.equalTo(self.view).multipliedBy(0.8)
     }
   }
   
+  // MARK: Action
+  
   @objc func movieTitleButtonPressed(sender: UIButton) {
     print("movieTitleButtonPressed")
+  }
+  
+  @objc func watchedStatusChanged(sender: UISwitch) {
+    print("watchedStatusChanged to \(sender.isOn)")
+    movieInfo.watched = watchedSw.isOn
+  }
+  
+  @objc func numberOfLikesChanged(sender: UIStepper) {
+    print("numberOfLikesChanged to \(sender.value)")
+    movieInfo.likes = Int(likesSt.value)
+    descriptionLbl.text = messageForLikes()
+  }
+  
+  
+  // MARK: Methods
+  
+  func setValuesToViews() {
+    let session = URLSession(configuration: .default)
+    let url = URL(string: movieInfo.coverURL)
+    
+    session.dataTask(with: url!) { (fetchedData, response, error) in
+      DispatchQueue.main.async {
+        if let data = fetchedData {
+          self.movieCoverImgView.image = UIImage(data: data)
+        }
+      }
+    }
+    
+    movieTitleBtn.setTitle(movieInfo.title, for: .normal)
+    categoryLbl.text = movieInfo.category
+    yearLbl.text = String(movieInfo.year)
+    watchedSw.isOn = movieInfo.watched
+    likesSt.value = Double(movieInfo.likes)
+    descriptionLbl.text = messageForLikes()
+  }
+  
+  func messageForLikes() -> String {
+    switch movieInfo.likes {
+    case 0:
+      return "I didn't like it at all."
+    case 1:
+      return "Interesting, but not exciting."
+    case 2:
+      return "Nice movie!"
+    default:
+      return "I loved it!"
+    }
   }
 }
