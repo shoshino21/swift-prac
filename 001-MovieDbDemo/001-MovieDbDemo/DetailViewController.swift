@@ -23,14 +23,34 @@ class DetailViewController: UIViewController {
   var movieId: Int!
   var movieInfo: MovieInfo!
   
-  // MARK: UI
+  // MARK: LifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     createUI()
+    createSaveButton()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    
+    if let id = movieId {
+      DBManager.shared.loadMovie(id) { (movie) in
+        DispatchQueue.main.async {
+          if movie != nil {
+            self.movieInfo = movie
+            self.setValuesToViews()
+          }
+        }
+      }
+    }
+  }
+  
+  // MARK: UI
+  
   func createUI() {
+    self.view.backgroundColor = .white
+    
     movieCoverImgView = UIImageView()
     self.view.addSubview(movieCoverImgView)
     
@@ -69,6 +89,16 @@ class DetailViewController: UIViewController {
     descriptionLbl.text = "1234567890qwertyuiop[asdfgjklxcvbnm234567890qwertyuiop[asdfghjklxcvbnm1234567890poiuytrewqasdfgjklmbvcxzasdfjkjklasdfjklasdfjkladfjkladfjkladsfjkladsfjkaldsfjk"
     
     addConstraints()
+  }
+  
+  func createSaveButton() {
+    let saveButton = UIBarButtonItem(
+      title: "Save",
+      style: .plain,
+      target: self,
+      action: #selector(saveButtonPressed)
+    )
+    self.navigationItem.rightBarButtonItem = saveButton
   }
 
   func addConstraints() {
@@ -113,6 +143,15 @@ class DetailViewController: UIViewController {
   
   // MARK: Action
   
+  @objc func saveButtonPressed(sender: UIButton) {
+    print("saveButtonPressed")
+    
+    _ = DBManager.shared.updateMovie(
+      movieInfo.movieID, watched: movieInfo.watched, likes: movieInfo.likes)
+    
+    self.navigationController?.popViewController(animated: true)
+  }
+  
   @objc func movieTitleButtonPressed(sender: UIButton) {
     print("movieTitleButtonPressed")
   }
@@ -135,13 +174,14 @@ class DetailViewController: UIViewController {
     let session = URLSession(configuration: .default)
     let url = URL(string: movieInfo.coverURL)
     
-    session.dataTask(with: url!) { (fetchedData, response, error) in
+    let task = session.dataTask(with: url!) { (fetchedData, response, error) in
       DispatchQueue.main.async {
         if let data = fetchedData {
           self.movieCoverImgView.image = UIImage(data: data)
         }
       }
     }
+    task.resume()
     
     movieTitleBtn.setTitle(movieInfo.title, for: .normal)
     categoryLbl.text = movieInfo.category

@@ -39,7 +39,7 @@ class ListViewController: UIViewController {
     movieListTable.dataSource = self
     movieListTable.delegate = self
     movieListTable.backgroundColor = .white
-    movieListTable.register(UITableViewCell.self, forCellReuseIdentifier: listCellIdentifier)
+    movieListTable.register(SHOTableCell.self, forCellReuseIdentifier: listCellIdentifier)
     movieListTable.allowsSelection = true
     self.view.addSubview(movieListTable)
     
@@ -62,7 +62,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: listCellIdentifier, for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: listCellIdentifier, for: indexPath) as! SHOTableCell
     
     let currentMovie = movies[indexPath.row]
     
@@ -72,11 +72,19 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     let session = URLSession(configuration: .default)
     let url = URL(string: currentMovie.coverURL)!
     
+    cell.tag = indexPath.row
+    
     let task = session.dataTask(with: url) { (imageData, response, error) in
       if let data = imageData {
         DispatchQueue.main.async {
-          cell.imageView?.image = UIImage(data: data)
-          cell.layoutSubviews()
+          // 比對是否和下載前是同一 cell
+          if cell.tag == indexPath.row {
+            cell.imageView?.image = UIImage(data: data)
+            cell.layoutSubviews()
+          }
+          else {
+            print("mismatch, idx:\(indexPath.row)")
+          }
         }
       }
     }
@@ -92,9 +100,17 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     selectedMovieIndex = indexPath.row
-    print("\([indexPath.row]) is selected")
     let detailVc = DetailViewController()
-    self.navigationController?.pushViewController(detailVc, animated: true)
+    detailVc.movieId = movies[selectedMovieIndex].movieID
     
+    self.navigationController?.pushViewController(detailVc, animated: true)
+  }
+}
+
+class SHOTableCell: UITableViewCell {
+  // 避免圖片錯位
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    self.imageView?.image = nil
   }
 }

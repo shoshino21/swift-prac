@@ -131,13 +131,13 @@ class DBManager: NSObject {
   
   func loadMovies() -> [MovieInfo]! {
     var movies: [MovieInfo]!
-    
+
     if openDatabase() {
       let query = "select * from movies order by \(field_MovieYear) asc"
-      
+
       do {
         let results = try database.executeQuery(query, values: nil)
-        
+
         while results.next() {
           let movie = MovieInfo(movieID: Int(results.int(forColumn: field_MovieID)),
                                 title: results.string(forColumn: field_MovieTitle),
@@ -148,12 +148,47 @@ class DBManager: NSObject {
                                 watched: results.bool(forColumn: field_MovieWatched),
                                 likes: Int(results.int(forColumn: field_MovieLikes))
           )
-          
+
           if movies == nil {
             movies = [MovieInfo]()
           }
-          
+
           movies.append(movie)
+        }
+      }
+      catch {
+        print(error.localizedDescription)
+      }
+
+      database.close()
+    }
+
+    return movies
+  }
+  
+  typealias LoadMovieCompletionHandler = (_ movieInfo: MovieInfo?) -> Void
+  func loadMovie(_ id: Int, _ completionHandler: LoadMovieCompletionHandler) {
+    var movieInfo: MovieInfo!
+    
+    if openDatabase() {
+      let query = "select * from movies where \(field_MovieID) = ?"
+      
+      do {
+        let results = try database.executeQuery(query, values: [id])
+        
+        if results.next() {
+          movieInfo = MovieInfo(movieID: Int(results.int(forColumn: field_MovieID)),
+                                title: results.string(forColumn: field_MovieTitle),
+                                category: results.string(forColumn: field_MovieCategory),
+                                year: Int(results.int(forColumn: field_MovieYear)),
+                                movieURL: results.string(forColumn: field_MovieURL),
+                                coverURL: results.string(forColumn: field_MovieCoverURL),
+                                watched: results.bool(forColumn: field_MovieWatched),
+                                likes: Int(results.int(forColumn: field_MovieLikes))
+          )
+        }
+        else {
+          print(database.lastError())
         }
       }
       catch {
@@ -163,6 +198,27 @@ class DBManager: NSObject {
       database.close()
     }
     
-    return movies
+    completionHandler(movieInfo)
+  }
+  
+  func updateMovie(_ id: Int, watched: Bool, likes: Int) -> Bool {
+    var success = false
+    
+    if openDatabase() {
+      let query = "update movies set \(field_MovieWatched) = ?, \(field_MovieLikes) = ? where \(field_MovieID) = ?"
+      
+      do {
+        try database.executeUpdate(query, values: [watched, likes, id])
+        success = true
+      }
+      catch {
+        print(error.localizedDescription)
+        success = false
+      }
+      
+      database.close()
+    }
+    
+    return success
   }
 }
