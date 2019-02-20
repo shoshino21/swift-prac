@@ -105,6 +105,15 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
     
     self.navigationController?.pushViewController(detailVc, animated: true)
   }
+  
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      if DBManager.shared.deleteMovie(movies[indexPath.row].movieID) {
+        movies.remove(at: indexPath.row)
+        tableView.reloadData()
+      }
+    }
+  }
 }
 
 class SHOTableCell: UITableViewCell {

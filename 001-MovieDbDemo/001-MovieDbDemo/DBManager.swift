@@ -221,4 +221,24 @@ class DBManager: NSObject {
     
     return success
   }
+  
+  func deleteMovie(_ id: Int) -> Bool {
+    var success = false
+    
+    if openDatabase() {
+      let query = "delete from movies where \(field_MovieID) = ?"
+      
+      do {
+        try database.executeUpdate(query, values: [id])
+        success = true
+      }
+      catch {
+        print(error.localizedDescription)
+      }
+      
+      database.close()
+    }
+    
+    return success
+  }
 }
