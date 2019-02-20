@@ -11,6 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
   // MARK: UI
+  
   var movieCoverImgView: UIImageView!
   var movieTitleBtn: UIButton!
   var categoryLbl: UILabel!
@@ -20,6 +21,7 @@ class DetailViewController: UIViewController {
   var descriptionLbl: UILabel!
   
   // MARK: Properties
+  
   var movieId: Int!
   var movieInfo: MovieInfo!
   
