@@ -7,51 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90882FC6221EB2E600A67BFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90882FC5221EB2E600A67BFA /* AppDelegate.swift */; };
-		90882FC8221EB2E600A67BFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90882FC7221EB2E600A67BFA /* ViewController.swift */; };
-		90882FCE221EB2E600A67BFA /* _02_ToDoList_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90882FCC221EB2E600A67BFA /* _02_ToDoList_CoreData.xcdatamodeld */; };
-		90882FD0221EB2E700A67BFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90882FCF221EB2E700A67BFA /* Assets.xcassets */; };
-		90882FD3221EB2E700A67BFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90882FD1221EB2E700A67BFA /* LaunchScreen.storyboard */; };
-		90882FE9221EB30F00A67BFA /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FDB221EB30F00A67BFA /* check.png */; };
-		90882FEA221EB30F00A67BFA /* checkbox@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FDC221EB30F00A67BFA /* checkbox@3x.png */; };
-		90882FEB221EB30F00A67BFA /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FDD221EB30F00A67BFA /* checkbox@2x.png */; };
-		90882FEC221EB30F00A67BFA /* more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FDE221EB30F00A67BFA /* more@3x.png */; };
-		90882FED221EB30F00A67BFA /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FDF221EB30F00A67BFA /* check@2x.png */; };
-		90882FEE221EB30F00A67BFA /* check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FE0221EB30F00A67BFA /* check@3x.png */; };
-		90882FEF221EB30F00A67BFA /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FE1221EB30F00A67BFA /* more@2x.png */; };
-		90882FF0221EB30F00A67BFA /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FE2221EB30F00A67BFA /* checkbox.png */; };
-		90882FF1221EB30F00A67BFA /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 90882FE3221EB30F00A67BFA /* more.png */; };
-		90882FF2221EB30F00A67BFA /* sound57.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90882FE5221EB30F00A67BFA /* sound57.wav */; };
-		90882FF3221EB30F00A67BFA /* bottle_pop_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90882FE6221EB30F00A67BFA /* bottle_pop_3.wav */; };
-		90882FF4221EB30F00A67BFA /* sound69.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90882FE7221EB30F00A67BFA /* sound69.wav */; };
-		90882FF5221EB30F00A67BFA /* cutting-paper-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90882FE8221EB30F00A67BFA /* cutting-paper-2.mp3 */; };
+		90302056221FFE7B00B2C608 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90302055221FFE7B00B2C608 /* AppDelegate.swift */; };
+		90302058221FFE7B00B2C608 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90302057221FFE7B00B2C608 /* ViewController.swift */; };
+		9030205E221FFE7B00B2C608 /* _02_ToDoList_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9030205C221FFE7B00B2C608 /* _02_ToDoList_CoreData.xcdatamodeld */; };
+		90302060221FFE7C00B2C608 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9030205F221FFE7C00B2C608 /* Assets.xcassets */; };
+		90302063221FFE7C00B2C608 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90302061221FFE7C00B2C608 /* LaunchScreen.storyboard */; };
+		90302079221FFEF100B2C608 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = 9030206B221FFEF100B2C608 /* check.png */; };
+		9030207A221FFEF100B2C608 /* checkbox@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9030206C221FFEF100B2C608 /* checkbox@3x.png */; };
+		9030207B221FFEF100B2C608 /* checkbox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9030206D221FFEF100B2C608 /* checkbox@2x.png */; };
+		9030207C221FFEF100B2C608 /* more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9030206E221FFEF100B2C608 /* more@3x.png */; };
+		9030207D221FFEF100B2C608 /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9030206F221FFEF100B2C608 /* check@2x.png */; };
+		9030207E221FFEF100B2C608 /* check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90302070221FFEF100B2C608 /* check@3x.png */; };
+		9030207F221FFEF100B2C608 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90302071221FFEF100B2C608 /* more@2x.png */; };
+		90302080221FFEF100B2C608 /* checkbox.png in Resources */ = {isa = PBXBuildFile; fileRef = 90302072221FFEF100B2C608 /* checkbox.png */; };
+		90302081221FFEF100B2C608 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 90302073221FFEF100B2C608 /* more.png */; };
+		90302082221FFEF100B2C608 /* sound57.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90302075221FFEF100B2C608 /* sound57.wav */; };
+		90302083221FFEF100B2C608 /* bottle_pop_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90302076221FFEF100B2C608 /* bottle_pop_3.wav */; };
+		90302084221FFEF100B2C608 /* sound69.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90302077221FFEF100B2C608 /* sound69.wav */; };
+		90302085221FFEF100B2C608 /* cutting-paper-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90302078221FFEF100B2C608 /* cutting-paper-2.mp3 */; };
+		9030208822213A7900B2C608 /* Record+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030208622213A7900B2C608 /* Record+CoreDataClass.swift */; };
+		9030208922213A7900B2C608 /* Record+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030208722213A7900B2C608 /* Record+CoreDataProperties.swift */; };
+		9030208B22213F3900B2C608 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030208A22213F3900B2C608 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		90882FC2221EB2E600A67BFA /* 002_ToDoList_CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 002_ToDoList_CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		90882FC5221EB2E600A67BFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		90882FC7221EB2E600A67BFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		90882FCD221EB2E600A67BFA /* _02_ToDoList_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _02_ToDoList_CoreData.xcdatamodel; sourceTree = "<group>"; };
-		90882FCF221EB2E700A67BFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		90882FD2221EB2E700A67BFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		90882FD4221EB2E700A67BFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		90882FDB221EB30F00A67BFA /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
-		90882FDC221EB30F00A67BFA /* checkbox@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@3x.png"; sourceTree = "<group>"; };
-		90882FDD221EB30F00A67BFA /* checkbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@2x.png"; sourceTree = "<group>"; };
-		90882FDE221EB30F00A67BFA /* more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@3x.png"; sourceTree = "<group>"; };
-		90882FDF221EB30F00A67BFA /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
-		90882FE0221EB30F00A67BFA /* check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@3x.png"; sourceTree = "<group>"; };
-		90882FE1221EB30F00A67BFA /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
-		90882FE2221EB30F00A67BFA /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
-		90882FE3221EB30F00A67BFA /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
-		90882FE5221EB30F00A67BFA /* sound57.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound57.wav; sourceTree = "<group>"; };
-		90882FE6221EB30F00A67BFA /* bottle_pop_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bottle_pop_3.wav; sourceTree = "<group>"; };
-		90882FE7221EB30F00A67BFA /* sound69.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound69.wav; sourceTree = "<group>"; };
-		90882FE8221EB30F00A67BFA /* cutting-paper-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cutting-paper-2.mp3"; sourceTree = "<group>"; };
+		90302052221FFE7B00B2C608 /* 002_ToDoList_CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 002_ToDoList_CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90302055221FFE7B00B2C608 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		90302057221FFE7B00B2C608 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9030205D221FFE7B00B2C608 /* _02_ToDoList_CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _02_ToDoList_CoreData.xcdatamodel; sourceTree = "<group>"; };
+		9030205F221FFE7C00B2C608 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		90302062221FFE7C00B2C608 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		90302064221FFE7C00B2C608 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9030206B221FFEF100B2C608 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		9030206C221FFEF100B2C608 /* checkbox@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@3x.png"; sourceTree = "<group>"; };
+		9030206D221FFEF100B2C608 /* checkbox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox@2x.png"; sourceTree = "<group>"; };
+		9030206E221FFEF100B2C608 /* more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@3x.png"; sourceTree = "<group>"; };
+		9030206F221FFEF100B2C608 /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		90302070221FFEF100B2C608 /* check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@3x.png"; sourceTree = "<group>"; };
+		90302071221FFEF100B2C608 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		90302072221FFEF100B2C608 /* checkbox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox.png; sourceTree = "<group>"; };
+		90302073221FFEF100B2C608 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		90302075221FFEF100B2C608 /* sound57.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound57.wav; sourceTree = "<group>"; };
+		90302076221FFEF100B2C608 /* bottle_pop_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bottle_pop_3.wav; sourceTree = "<group>"; };
+		90302077221FFEF100B2C608 /* sound69.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound69.wav; sourceTree = "<group>"; };
+		90302078221FFEF100B2C608 /* cutting-paper-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cutting-paper-2.mp3"; sourceTree = "<group>"; };
+		9030208622213A7900B2C608 /* Record+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9030208722213A7900B2C608 /* Record+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Record+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9030208A22213F3900B2C608 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = 002_ToDoList_CoreData/CoreDataManager.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		90882FBF221EB2E600A67BFA /* Frameworks */ = {
+		9030204F221FFE7B00B2C608 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,74 +67,79 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		90882FB9221EB2E600A67BFA = {
+		90302049221FFE7B00B2C608 = {
 			isa = PBXGroup;
 			children = (
-				90882FC4221EB2E600A67BFA /* 002_ToDoList_CoreData */,
-				90882FC3221EB2E600A67BFA /* Products */,
+				9030208622213A7900B2C608 /* Record+CoreDataClass.swift */,
+				9030208722213A7900B2C608 /* Record+CoreDataProperties.swift */,
+				90302054221FFE7B00B2C608 /* 002_ToDoList_CoreData */,
+				90302053221FFE7B00B2C608 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		90882FC3221EB2E600A67BFA /* Products */ = {
+		90302053221FFE7B00B2C608 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				90882FC2221EB2E600A67BFA /* 002_ToDoList_CoreData.app */,
+				90302052221FFE7B00B2C608 /* 002_ToDoList_CoreData.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		90882FC4221EB2E600A67BFA /* 002_ToDoList_CoreData */ = {
+		90302054221FFE7B00B2C608 /* 002_ToDoList_CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				90882FC5221EB2E600A67BFA /* AppDelegate.swift */,
-				90882FC7221EB2E600A67BFA /* ViewController.swift */,
-				90882FCF221EB2E700A67BFA /* Assets.xcassets */,
-				90882FD1221EB2E700A67BFA /* LaunchScreen.storyboard */,
-				90882FD4221EB2E700A67BFA /* Info.plist */,
-				90882FCC221EB2E600A67BFA /* _02_ToDoList_CoreData.xcdatamodeld */,
-				90882FDA221EB30F00A67BFA /* icons */,
-				90882FE4221EB30F00A67BFA /* sounds */,
+				90302055221FFE7B00B2C608 /* AppDelegate.swift */,
+				90302057221FFE7B00B2C608 /* ViewController.swift */,
+				9030208A22213F3900B2C608 /* CoreDataManager.swift */,
+				9030205F221FFE7C00B2C608 /* Assets.xcassets */,
+				90302061221FFE7C00B2C608 /* LaunchScreen.storyboard */,
+				90302064221FFE7C00B2C608 /* Info.plist */,
+				9030205C221FFE7B00B2C608 /* _02_ToDoList_CoreData.xcdatamodeld */,
+				9030206A221FFEF100B2C608 /* icons */,
+				90302074221FFEF100B2C608 /* sounds */,
 			);
 			path = 002_ToDoList_CoreData;
 			sourceTree = "<group>";
 		};
-		90882FDA221EB30F00A67BFA /* icons */ = {
+		9030206A221FFEF100B2C608 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				90882FDB221EB30F00A67BFA /* check.png */,
-				90882FDC221EB30F00A67BFA /* checkbox@3x.png */,
-				90882FDD221EB30F00A67BFA /* checkbox@2x.png */,
-				90882FDE221EB30F00A67BFA /* more@3x.png */,
-				90882FDF221EB30F00A67BFA /* check@2x.png */,
-				90882FE0221EB30F00A67BFA /* check@3x.png */,
-				90882FE1221EB30F00A67BFA /* more@2x.png */,
-				90882FE2221EB30F00A67BFA /* checkbox.png */,
-				90882FE3221EB30F00A67BFA /* more.png */,
+				9030206B221FFEF100B2C608 /* check.png */,
+				9030206C221FFEF100B2C608 /* checkbox@3x.png */,
+				9030206D221FFEF100B2C608 /* checkbox@2x.png */,
+				9030206E221FFEF100B2C608 /* more@3x.png */,
+				9030206F221FFEF100B2C608 /* check@2x.png */,
+				90302070221FFEF100B2C608 /* check@3x.png */,
+				90302071221FFEF100B2C608 /* more@2x.png */,
+				90302072221FFEF100B2C608 /* checkbox.png */,
+				90302073221FFEF100B2C608 /* more.png */,
 			);
-			path = icons;
+			name = icons;
+			path = ../../icons;
 			sourceTree = "<group>";
 		};
-		90882FE4221EB30F00A67BFA /* sounds */ = {
+		90302074221FFEF100B2C608 /* sounds */ = {
 			isa = PBXGroup;
 			children = (
-				90882FE5221EB30F00A67BFA /* sound57.wav */,
-				90882FE6221EB30F00A67BFA /* bottle_pop_3.wav */,
-				90882FE7221EB30F00A67BFA /* sound69.wav */,
-				90882FE8221EB30F00A67BFA /* cutting-paper-2.mp3 */,
+				90302075221FFEF100B2C608 /* sound57.wav */,
+				90302076221FFEF100B2C608 /* bottle_pop_3.wav */,
+				90302077221FFEF100B2C608 /* sound69.wav */,
+				90302078221FFEF100B2C608 /* cutting-paper-2.mp3 */,
 			);
-			path = sounds;
+			name = sounds;
+			path = ../../sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		90882FC1221EB2E600A67BFA /* 002_ToDoList_CoreData */ = {
+		90302051221FFE7B00B2C608 /* 002_ToDoList_CoreData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 90882FD7221EB2E700A67BFA /* Build configuration list for PBXNativeTarget "002_ToDoList_CoreData" */;
+			buildConfigurationList = 90302067221FFE7C00B2C608 /* Build configuration list for PBXNativeTarget "002_ToDoList_CoreData" */;
 			buildPhases = (
-				90882FBE221EB2E600A67BFA /* Sources */,
-				90882FBF221EB2E600A67BFA /* Frameworks */,
-				90882FC0221EB2E600A67BFA /* Resources */,
+				9030204E221FFE7B00B2C608 /* Sources */,
+				9030204F221FFE7B00B2C608 /* Frameworks */,
+				90302050221FFE7B00B2C608 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -136,25 +147,25 @@
 			);
 			name = 002_ToDoList_CoreData;
 			productName = 002_ToDoList_CoreData;
-			productReference = 90882FC2221EB2E600A67BFA /* 002_ToDoList_CoreData.app */;
+			productReference = 90302052221FFE7B00B2C608 /* 002_ToDoList_CoreData.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		90882FBA221EB2E600A67BFA /* Project object */ = {
+		9030204A221FFE7B00B2C608 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = com.mitake;
 				TargetAttributes = {
-					90882FC1221EB2E600A67BFA = {
+					90302051221FFE7B00B2C608 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 90882FBD221EB2E600A67BFA /* Build configuration list for PBXProject "002_ToDoList_CoreData" */;
+			buildConfigurationList = 9030204D221FFE7B00B2C608 /* Build configuration list for PBXProject "002_ToDoList_CoreData" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -162,59 +173,62 @@
 				en,
 				Base,
 			);
-			mainGroup = 90882FB9221EB2E600A67BFA;
-			productRefGroup = 90882FC3221EB2E600A67BFA /* Products */;
+			mainGroup = 90302049221FFE7B00B2C608;
+			productRefGroup = 90302053221FFE7B00B2C608 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				90882FC1221EB2E600A67BFA /* 002_ToDoList_CoreData */,
+				90302051221FFE7B00B2C608 /* 002_ToDoList_CoreData */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		90882FC0221EB2E600A67BFA /* Resources */ = {
+		90302050221FFE7B00B2C608 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90882FF3221EB30F00A67BFA /* bottle_pop_3.wav in Resources */,
-				90882FF0221EB30F00A67BFA /* checkbox.png in Resources */,
-				90882FEF221EB30F00A67BFA /* more@2x.png in Resources */,
-				90882FEE221EB30F00A67BFA /* check@3x.png in Resources */,
-				90882FEC221EB30F00A67BFA /* more@3x.png in Resources */,
-				90882FF4221EB30F00A67BFA /* sound69.wav in Resources */,
-				90882FEA221EB30F00A67BFA /* checkbox@3x.png in Resources */,
-				90882FE9221EB30F00A67BFA /* check.png in Resources */,
-				90882FF1221EB30F00A67BFA /* more.png in Resources */,
-				90882FEB221EB30F00A67BFA /* checkbox@2x.png in Resources */,
-				90882FF2221EB30F00A67BFA /* sound57.wav in Resources */,
-				90882FD3221EB2E700A67BFA /* LaunchScreen.storyboard in Resources */,
-				90882FD0221EB2E700A67BFA /* Assets.xcassets in Resources */,
-				90882FF5221EB30F00A67BFA /* cutting-paper-2.mp3 in Resources */,
-				90882FED221EB30F00A67BFA /* check@2x.png in Resources */,
+				90302083221FFEF100B2C608 /* bottle_pop_3.wav in Resources */,
+				90302080221FFEF100B2C608 /* checkbox.png in Resources */,
+				9030207F221FFEF100B2C608 /* more@2x.png in Resources */,
+				9030207E221FFEF100B2C608 /* check@3x.png in Resources */,
+				9030207C221FFEF100B2C608 /* more@3x.png in Resources */,
+				90302084221FFEF100B2C608 /* sound69.wav in Resources */,
+				9030207A221FFEF100B2C608 /* checkbox@3x.png in Resources */,
+				90302079221FFEF100B2C608 /* check.png in Resources */,
+				90302081221FFEF100B2C608 /* more.png in Resources */,
+				9030207B221FFEF100B2C608 /* checkbox@2x.png in Resources */,
+				90302082221FFEF100B2C608 /* sound57.wav in Resources */,
+				90302063221FFE7C00B2C608 /* LaunchScreen.storyboard in Resources */,
+				90302060221FFE7C00B2C608 /* Assets.xcassets in Resources */,
+				90302085221FFEF100B2C608 /* cutting-paper-2.mp3 in Resources */,
+				9030207D221FFEF100B2C608 /* check@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		90882FBE221EB2E600A67BFA /* Sources */ = {
+		9030204E221FFE7B00B2C608 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90882FC8221EB2E600A67BFA /* ViewController.swift in Sources */,
-				90882FCE221EB2E600A67BFA /* _02_ToDoList_CoreData.xcdatamodeld in Sources */,
-				90882FC6221EB2E600A67BFA /* AppDelegate.swift in Sources */,
+				9030208B22213F3900B2C608 /* CoreDataManager.swift in Sources */,
+				9030208922213A7900B2C608 /* Record+CoreDataProperties.swift in Sources */,
+				9030208822213A7900B2C608 /* Record+CoreDataClass.swift in Sources */,
+				90302058221FFE7B00B2C608 /* ViewController.swift in Sources */,
+				9030205E221FFE7B00B2C608 /* _02_ToDoList_CoreData.xcdatamodeld in Sources */,
+				90302056221FFE7B00B2C608 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		90882FD1221EB2E700A67BFA /* LaunchScreen.storyboard */ = {
+		90302061221FFE7C00B2C608 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				90882FD2221EB2E700A67BFA /* Base */,
+				90302062221FFE7C00B2C608 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -222,7 +236,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		90882FD5221EB2E700A67BFA /* Debug */ = {
+		90302065221FFE7C00B2C608 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -283,7 +297,7 @@
 			};
 			name = Debug;
 		};
-		90882FD6221EB2E700A67BFA /* Release */ = {
+		90302066221FFE7C00B2C608 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -338,7 +352,7 @@
 			};
 			name = Release;
 		};
-		90882FD8221EB2E700A67BFA /* Debug */ = {
+		90302068221FFE7C00B2C608 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -357,7 +371,7 @@
 			};
 			name = Debug;
 		};
-		90882FD9221EB2E700A67BFA /* Release */ = {
+		90302069221FFE7C00B2C608 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -379,20 +393,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		90882FBD221EB2E600A67BFA /* Build configuration list for PBXProject "002_ToDoList_CoreData" */ = {
+		9030204D221FFE7B00B2C608 /* Build configuration list for PBXProject "002_ToDoList_CoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90882FD5221EB2E700A67BFA /* Debug */,
-				90882FD6221EB2E700A67BFA /* Release */,
+				90302065221FFE7C00B2C608 /* Debug */,
+				90302066221FFE7C00B2C608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		90882FD7221EB2E700A67BFA /* Build configuration list for PBXNativeTarget "002_ToDoList_CoreData" */ = {
+		90302067221FFE7C00B2C608 /* Build configuration list for PBXNativeTarget "002_ToDoList_CoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90882FD8221EB2E700A67BFA /* Debug */,
-				90882FD9221EB2E700A67BFA /* Release */,
+				90302068221FFE7C00B2C608 /* Debug */,
+				90302069221FFE7C00B2C608 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -400,17 +414,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		90882FCC221EB2E600A67BFA /* _02_ToDoList_CoreData.xcdatamodeld */ = {
+		9030205C221FFE7B00B2C608 /* _02_ToDoList_CoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				90882FCD221EB2E600A67BFA /* _02_ToDoList_CoreData.xcdatamodel */,
+				9030205D221FFE7B00B2C608 /* _02_ToDoList_CoreData.xcdatamodel */,
 			);
-			currentVersion = 90882FCD221EB2E600A67BFA /* _02_ToDoList_CoreData.xcdatamodel */;
+			currentVersion = 9030205D221FFE7B00B2C608 /* _02_ToDoList_CoreData.xcdatamodel */;
 			path = _02_ToDoList_CoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 90882FBA221EB2E600A67BFA /* Project object */;
+	rootObject = 9030204A221FFE7B00B2C608 /* Project object */;
 }
